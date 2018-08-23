@@ -1,0 +1,84 @@
+div.guages-wpr{
+    height: 450px;
+    color:rgb(231, 231, 231);
+}
+
+div.guages-row{
+    padding:50px 0px;
+    margin-bottom:10px;
+    background:rgba(0,0,0,0.4);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow:4px 4px 10px rgba(0,0,0,0.7);
+}
+
+div.guage-col{
+    border-right: 3px solid rgba(0,0,0,0.1)
+}
+div.round-guage{
+    margin:0px auto;
+    height:110px;
+    width:110px;
+    background:rgba(0,0,0,0.3);
+    border-radius: 100px;
+    box-shadow:2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.healthy{
+    border:4px solid coral;
+}
+
+.unhealthy{
+    border:4px solid coral;
+}
+
+.poor{
+    border:4px solid coral;
+}
+
+.hazardous{
+    border:4px solid coral;
+} 
+
+
+p.gauge-param{
+    margin:5px 0px 5px 0px;
+    padding-top:20px;
+    color:rgb(243, 243, 243);
+    font-size:1.1em;
+    font-weight: bold;
+    font-family: 'Century Gothic'
+}
+
+p.gauge-value{
+    color:rgb(243, 243, 243);
+    font-size:0.9em;
+    font-weight: bold;
+    font-family: 'Century Gothic'
+}
+div.per-param-chart{
+    border:1px solid transparent;
+    border-radius:10px;
+    background:rgba(0,0,0,0.2);
+    
+}
+div.avg-graph{
+    margin-bottom:10px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow:4px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+.last-update{
+    position:absolute;
+    width:100%;
+    top:5px
+}
+.last-update p{
+    text-align:center;
+    font-size:0.8em
+}
+
+.active{
+    background:#569929
+}

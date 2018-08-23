@@ -1,0 +1,9 @@
+div.graph-wpr{
+    height: 450px;
+    background:rgba(0,0,0,0.4);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    box-shadow:4px 4px 10px rgba(0,0,0,0.7);
+    color:rgb(230, 167, 32) 
+    
+}

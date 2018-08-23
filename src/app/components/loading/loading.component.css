@@ -1,0 +1,16 @@
+.loading-wpr{
+    width: 100%;
+    z-index: 5;
+    position:fixed;
+    top:0px;
+    height:100%;
+    background:rgba(0, 0, 0, 0.6);
+    
+}
+
+img.loading-gif{
+    width:70px;
+    display:block;
+    margin:auto;
+    margin-top:20%
+}

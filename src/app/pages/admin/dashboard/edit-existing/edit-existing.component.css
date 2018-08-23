@@ -1,0 +1,50 @@
+div.main-wpr{
+    height:100%;
+}
+
+
+div.list-wpr{
+    height:500px;
+    background:rgb(219, 219, 219);    
+    overflow-y: auto;
+}
+
+
+div.list-head{
+    color:white;
+    background: #86c655
+}
+
+div.list-wpr,div.edit-block-wpr{
+    padding:0px
+}
+
+.clItem{
+    background:rgb(241, 241, 241);
+    color:rgb(141, 141, 141)
+}
+
+div.edit-block-wpr{
+    background:rgb(216, 216, 216)
+}
+div.list-wpr{
+    border-right:2px solid white;
+}
+
+div#edit-inr-wpr{
+    padding:30px
+}
+
+div.add-device-wpr{
+    border-left:1px solid rgb(184, 184, 184)
+}
+
+i.fa-plus{
+    color:white
+}
+
+@media only screen and (max-width:768px){
+    div#edit-inr-wpr{
+        padding:10px
+    } 
+}

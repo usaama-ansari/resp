@@ -1,0 +1,75 @@
+<div class="guages-wpr">
+  <div class="container">
+    <div class="last-update">
+      <p style="padding-bottom:0px;margin-bottom:0px">Last updated: {{real_time_data['date']}}</p>
+      <p style="font-size:0.6em;z-index:3;color:white">Click on parameter to see last 30 days historic data.</p>
+    </div>
+    <div class="row guages-row text-center">
+
+      <!-- PM 2.5 -->
+
+      <div class="col guage-col cursor" #pm25 (click)="onParamSelected('pm2.5','ug/m3',500,0,100)">
+        <div class="round-guage hazardous">
+          <p class="gauge-param ">PM2.5</p>
+          <p class="gauge-value">{{real_time_data['pm_2_5']}} ug/m3</p>
+        </div>
+      </div>
+
+      <!-- PM 10 -->
+
+      <div class="col guage-col cursor" #pm10 (click)="onParamSelected('pm10','ug/m3',500,0,100)">
+        <div class="round-guage healthy">
+          <p class="gauge-param">PM10</p>
+          <p class="gauge-value">{{real_time_data['pm10']}} ug/m3</p>
+        </div>
+      </div>
+
+      <!-- CO2 -->
+
+      <div class="col guage-col cursor" #co2 (click)="onParamSelected('co2','ppm',4000,0,1000)">
+        <div class="round-guage healthy">
+          <p class="gauge-param">co2</p>
+          <p class="gauge-value">{{real_time_data['co2']}} ppm</p>
+        </div>
+      </div>
+
+      <!-- VOC -->
+
+      <div class="col guage-col cursor" #voc (click)="onParamSelected('voc','Levels',3,0,0.5)">
+        <div class="round-guage poor">
+          <p class="gauge-param">VOC</p>
+          <p class="gauge-value">{{real_time_data['voc']}}</p>
+        </div>
+      </div>
+
+      <!-- TEMP -->
+
+      <div class="col guage-col cursor" #temp (click)="onParamSelected('temperature','degree celcius',80,-20,10)">
+        <div class="round-guage healthy">
+          <p class="gauge-param">Temp.</p>
+          <p class="gauge-value">{{real_time_data['temperature']}}&deg; C</p>
+        </div>
+      </div>
+
+      <!-- HUM -->
+
+      <div class="col guage-col cursor" #hum (click)="onParamSelected('humidity','%',100,0,10)">
+        <div class="round-guage unhealthy">
+          <p class="gauge-param">Hum.</p>
+          <p class="gauge-value">{{real_time_data['humidity']}} %</p>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="row avg-graph">
+      <div class="per-param-chart" #chartTarget style="height:220px;width:100%;padding:5px ">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- AVERAGE GRAPH -->

@@ -1,0 +1,11 @@
+Step 1.Install node js
+# use node version 8.6.0
+
+Step 2. Navagate to the  project folder and make sure package.json file is there
+Step 3. Open command promt in the projects directory and run "npm install".This will install the dependencies along with
+        angular.
+
+Step 4. Thats all. Run "ng serve" to run the project.
+Step 5. Run "ng build --prod" to build the production build.(the build will be in /dist folder)
+
+

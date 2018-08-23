@@ -1,0 +1,78 @@
+<app-loading *ngIf="showLoader"></app-loading>
+<div class="container-fluid consolidated-wpr">
+    <h3 class="text-center" style="color:orange">{{clientConfig.brand?.client_name}}</h3>
+    <br/>
+    <p style="color:white;font-size:0.8em;padding:0px;margin:0px">Click on the device row to see historic data of corresponding device.</p>
+    <div class="card" style="background:rgba(255,255,255,0.2);">
+        <div class="card-header " style="background:rgba(255,255,255,0.2);">
+            <button class="btn" style="border:0px;width:100%;padding:0px">
+                <table class="table " style="width:100%;margin:0px">
+                    <tbody>
+                        <tr class="row">
+                            <td class="col" style="border:0px">
+                                <b>Devices</b>
+                            </td>
+                            <td class="col" style="border:0px">
+                                <b>PM2.5</b>
+                            </td>
+                            <td class="col" style="border:0px">
+                                <b>PM10</b>
+                            </td>
+                            <td class="col" style="border:0px">
+                                <b>VOC</b>
+                            </td>
+                            <td class="col" style="border:0px">
+                                <b>CO2</b>
+                            </td>
+                            <td class="col-2" style="border:0px">
+                                <b>Temperature</b>
+                            </td>
+                            <td class="col" style="border:0px">
+                                <b>Humidity</b>
+                            </td>
+                            <td class="col-2" style="border:0px">
+                                <b>Last updated</b>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </button>
+        </div>
+    </div>
+    <div *ngFor="let device of accordian_real_time_data;let i=index" class="card" style="background:rgba(255,255,255,0.2);">
+        <div class="card-header" style="background:rgba(255,255,255,0.2);">
+            <button class="btn cursor modal-btn" (click)="showGuageModal(i)" style="border:0px;width:100%;padding:0px" data-toggle="modal"
+                data-target="#one">
+                <table class="table " style="width:100%;margin:0px">
+                    <tbody>
+                        <tr class="row">
+                            <td class="col" style="border:0px">Device {{i | increament}}</td>
+                            <td class="col" style="border:0px">{{device['pm_2_5']}} ug/m3</td>
+                            <td class="col" style="border:0px">{{device['pm10']}} ug/m3</td>
+                            <td class="col" style="border:0px">{{device['voc']}}</td>
+                            <td class="col" style="border:0px">{{device['co2']}} ppm</td>
+                            <td class="col-2" style="border:0px">{{device['temperature']}} &deg;C</td>
+                            <td class="col" style="border:0px">{{device['humidity']}} %</td>
+                            <td class="col-2" style="border:0px;">{{device['date']}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="one">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <i class="fa fa-times cursor" data-dismiss="modal" style="margin:0px;padding:0px;color:orange"></i>
+                    <app-guage-banner [homePage]="isHomePage" [deviceId]="deviceId" [clientConfigReceived]="clientConfig"></app-guage-banner>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- <app-guage-banner  [homePage]="isHomePage" [clientConfigReceived]="clientConfig"></app-guage-banner> -->

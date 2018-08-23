@@ -1,0 +1,30 @@
+<app-loading *ngIf="showLoader"></app-loading>
+<div class="container-fluid" style="background:rgb(223, 223, 223);height:700px;padding-top:60px">
+  <h4 class="text-center lead">Client Login</h4>
+  <div class="form-wpr justify-content-center" style="max-width:400px;border:1px solid transparent;border-radius:10px;padding:20px;box-shadow:4px 4px 5px rgba(0,0,0,0.2);margin:auto;background:rgb(240, 240, 240)">
+
+    <!--#############################################################-->
+    <!--######                    FORM START                    #####-->
+    <!--#############################################################-->
+
+    <form ngNativeValidate (ngSubmit)="onFormSubmit(form)" #form="ngForm">
+
+      <div class="input-group input-group-sm mb-3">
+        <span class="input-group-addon">client id :</span>
+        <input class="form-control" #usrInput="ngModel" type="text" name="client_id" ngModel required/>
+      </div>
+
+      <div class="input-group input-group-sm mb-3">
+        <span class="input-group-addon">Password :</span>
+        <input class="form-control" type="password" name="password" ngModel required/>
+      </div>
+      <div>
+        <input style="width:40%;margin:auto;display:block" class="form-control cursor btn btn-primary btn-sm" type="submit" value="Log in">
+      </div>
+    </form>
+    <!--#############################################################-->
+    <!--######                     FORM END                     #####-->
+    <!--#############################################################-->
+
+  </div>
+</div>

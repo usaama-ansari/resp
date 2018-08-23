@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+    box-sizing: border-box;
+    font-family: 'Verdana','Century Gothic'
+}
+
+body{
+    margin:0px;
+    padding:0px;
+    height:650px;
+
+}
+
+.cursor{
+    cursor: pointer
+}

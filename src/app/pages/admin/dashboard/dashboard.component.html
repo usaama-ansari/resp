@@ -1,0 +1,23 @@
+<div *ngIf="showMenu" class="container-fluid db-menu">
+  <div class="row">
+    <div class="col-12 offset-md-3 col-md-6 menu-wpr">
+      <div class="row">
+        <div (click)="onRouting('new')" class="col cursor text-center tile" style="border-right:1px solid rgb(204, 204, 204)">
+          <div class="icon-wpr">
+            <i class="fa fa-plus mb-3"></i>
+            <h5>Add new customer</h5>
+          </div>
+        </div>
+        <div (click)="onRouting('edit')" class="col cursor text-center tile">
+          <div class="icon-wpr">
+            <i class="fa fa-edit mb-3"></i>
+            <h5>Edit existing customer</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<router-outlet>
+</router-outlet>

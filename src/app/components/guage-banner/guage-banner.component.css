@@ -1,0 +1,56 @@
+.bg-wpr{
+    height:550px;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat
+}
+
+div.classroom-select{
+    margin:auto;
+    width:250px;
+    height:40px;
+    border-radius:5px;
+   
+}
+
+.fa-arrow-left{
+    color: orange;
+    transition: transform 0.1s
+}
+.fa-arrow-right{
+    color: orange;
+    transition: transform 0.1s
+}
+
+
+div.node-container{
+    background: rgba(0,0,0,0.4);
+    border:1px solid transparent;
+    border-radius:10px;
+    margin:auto;
+    color:orange;
+}
+
+.app-guages-wpr{
+    margin-top:0px
+}
+
+.fa-arrow-left:hover,.fa-arrow-right:hover{
+    color:rgb(255, 184, 61);
+    transform: scale(1.2)
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .bg-wpr{
+        height:1500px;
+    }
+
+    .app-guages-wpr{
+        margin-top:50px
+    }
+    .app-graph-wpr{
+
+    }
+}

@@ -1,0 +1,14 @@
+nav{
+    border-bottom:2px solid rgb(221, 221, 221);
+    padding:0px;
+    z-index:5;
+}
+
+.brand{
+    color: #86c656
+}
+.navbar-brand img{
+    height:50px;
+    margin:0px;
+    padding:0px
+}

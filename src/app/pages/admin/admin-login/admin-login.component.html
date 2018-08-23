@@ -1,0 +1,18 @@
+<div class="container-fluid" style="height:100%;background:rgb(38, 41, 43)">
+  <br/>
+  <h3 class="text-center" style="color:antiquewhite">Admin Login</h3>
+  <div class="form-wpr justify-content-center" style="max-width:400px;border:1px solid transparent;border-radius:10px;padding:20px;box-shadow:4px 4px 5px rgba(0,0,0,0.2);margin:auto;background:rgb(240, 240, 240)">
+    <form ngNativeValidate (ngSubmit)="onSubmit(f)" #f="ngForm">
+      <div class="form-group">
+        <label>Email:</label><br/>
+        <input class="form-control" type="email" name="email" ngModel required/>
+      </div>
+
+      <div class="form-group">
+        <label>Password:</label><br/>
+        <input class="form-control" type="password" name="password" ngModel required/>
+      </div>
+      <button class="btn btn-primary" type="submit">Login</button>
+    </form>
+  </div>
+</div>

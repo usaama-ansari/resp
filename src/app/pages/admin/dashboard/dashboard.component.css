@@ -1,0 +1,52 @@
+.db-menu{
+    background:#26292b;
+    height:100%
+}
+
+.menu-wpr{
+    margin-top:100px;
+    background:rgb(233, 233, 233);
+    border:1px solid rgb(189, 189, 189);
+    border-radius: 5px;
+    box-shadow:4px 4px 16px rgba(0,0,0,0.5)
+}
+
+div.condensed-menu{
+    padding:10px;
+    background: rgb(36, 36, 36)
+}
+
+div.tile{
+    padding:70px 5px 70px 5px
+}
+
+div.tile:hover > div.icon-wpr{
+ 
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+
+}
+
+div.icon-wpr{
+    -webkit-transition: -moz-transform .2s ; 
+    -moz-transition: -webkit-transform .2s ; 
+    -o-transition: -o-transform .2s ; 
+     transition: transform .2s ; 
+}
+
+div.tile i {
+    font-size:3.5em;
+    color:#26292b;
+   
+}
+
+
+@media only screen and (max-width:526px){
+    div.tile{
+        padding:40px 5px 40px 5px
+    }
+
+
+}

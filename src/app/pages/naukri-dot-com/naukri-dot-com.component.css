@@ -1,0 +1,28 @@
+.modal-dialog{
+max-width:100%
+
+}
+
+.modal-btn:hover{
+    background: rgb(199, 199, 199)
+}
+.consolidated-wpr{
+    background-image: url(../../../assets/consolidated-db-bg.jpg);
+    background-position: top;
+    padding: 40px 15px 150px 15px
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .consolidated-wpr{
+        background-image: url(../../../assets/consolidated-db-bg.jpg);
+        background-position: top;
+        padding: 40px 5px 150px 5px
+    }
+
+
+    div.card td{
+        font-size:0.6em
+    }
+    }

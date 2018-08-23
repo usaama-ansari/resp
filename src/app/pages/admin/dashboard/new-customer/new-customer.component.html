@@ -1,0 +1,43 @@
+<div class="container-fluid" style="height:100%;background:rgb(38, 41, 43)">
+  <h3 class="lead text-center" style="color:white;padding-top:15px">Create new client </h3>
+  <p class=" text-center" style="font-size:0.8em;margin:0px;color:rgb(255, 75, 75)">Note: Please note down the password for the client somewhere before submitting.</p>
+  <p class=" text-center" style="font-size:0.8em;margin:0px;color:rgb(255, 75, 75)">The client id and Password is what you hand over to your client.</p>
+
+  <div class="row">
+    <div class="col-md-8 offset-2">
+      <div class="form-wpr justify-content-center" style="max-width:400px;border:1px solid transparent;border-radius:10px;padding:20px;box-shadow:4px 4px 5px rgba(0,0,0,0.2);margin:auto;background:rgb(240, 240, 240)">
+        <form ngNativeValidate (ngSubmit)="onSubmit(f)" #f="ngForm">
+          <div class="formGroup">
+            <label>Client id:</label>
+            <input #un="ngModel" class="form-control" pattern="\S*$" name="client_id" type="text" ngModel required />
+           <p *ngIf="un.errors?.pattern" style="font-size:0.7em;margin:0px;position:absolute;color:rgb(253, 74, 74)">No white spaces allowed</p>
+            <div>
+              <label class="mt-3">Password:</label>
+              <input #pw="ngModel" class="form-control" pattern="\S*$" name="password" type="password" ngModel required/>
+              <p *ngIf="pw.errors?.pattern" style="font-size:0.7em;margin:0px;position:absolute;color:rgb(253, 74, 74)">Password must not contain spaces.</p>                         
+            </div>
+
+            <label class="mt-3">Client name:</label>
+            <input #cn="ngModel" class="form-control" name="client_name" type="text" ngModel required/>
+
+
+            <label class="mt-3">Device ids (unique id of device)</label>
+            <div class="form-group form-inline">
+              <input #nodeId="ngModel" pattern="\S*$" class="form-control mr-3" name="node_id" type="text" [(ngModel)]="node_id" />
+              <button type="button" class="btn btn-primary" (click)="add_device(nodeId)">{{node_id_array.length === 0?'Add':'Add More'}}</button>
+            </div>
+           <p *ngIf="nodeId.errors?.pattern" style="font-size:0.7em;margin:0px;position:absolute;color:rgb(253, 74, 74)">No white spaces allowed</p>           
+            <p style="padding:0px;font-size:0.8em;margin:0px" *ngFor="let node of node_id_array;let i=index">{{node}}
+              <i (click)="remove_device(i)" style="cursor:pointer" class="fa fa-times ml-3"></i>
+            </p>
+          </div>
+          <br/>
+          <button type="submit" [disabled]="!f.valid" class="btn btn-primary">Create user</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>

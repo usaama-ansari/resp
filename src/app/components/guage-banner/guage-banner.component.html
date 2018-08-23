@@ -1,0 +1,34 @@
+<app-loading *ngIf="showLoader"></app-loading>
+<!-- BANNER BACKGROUND CONTAINER -->
+<div class="container-fluid bg-wpr" [ngStyle]="{'background-image':'url('+clientConfigReceived.brand.backgroundImage+')'}">
+ <br/>
+  <div class="text-center classroom-select" *ngIf="!homePage" >
+    <div class="row" >
+        <div class="col-6 col-md-6 node-container" style="padding:6px 6px 6px 10px"><b>Device {{deviceId | increament}}</b></div>
+        <!-- <div class="btn-group" style="margin:auto">
+            <button type="button" class="btn dropdown-toggle " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Devices
+            </button>
+            <div class="dropdown-menu" >
+              <a *ngFor="let node of nodes;let i=index" class="dropdown-item cursor" (click)="change_CR(node)">Device {{i | increament}}</a>
+            </div>
+          </div> -->
+        <!-- <div class="col-3 col-md-3 float-left cursor" style="padding:6px 6px 6px 10px" >  <i (click)="change_CR(-1)"  class="fa fa-arrow-left cursor"></i></div>
+        <div class="col-6 col-md-6 node-container" style="padding:6px 6px 6px 10px">Device {{node_selected.index | increament}}</div>
+        <div class="col-3 col-md-3 float-right " style="padding:6px 6px 6px 10px"><i  (click)="change_CR(1)" class="fa  fa-arrow-right cursor"></i></div> -->
+    </div>
+  </div>
+  <div class="container-fluid">
+    <br/>
+    <div class="row">
+      <!-- GRAPH -->
+      <div class="col-12 col-md-3 app-graph-wpr">
+        <app-graph [clientConfigGraph]="clientConfigReceived.clientConfigGraph"></app-graph>
+      </div>
+      <!-- GUAGES -->
+      <div class="col-12 col-md-9 app-guages-wpr">
+        <app-guages [clientConfigGuages]="clientConfigReceived.clientConfigGuages"></app-guages>
+      </div>
+    </div>
+  </div>
+</div>
